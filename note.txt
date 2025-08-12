@@ -1,0 +1,43 @@
+Choose your React setup
+
+yarn create vite
+
+"react_table"
+
+React => Typescript
+
+cd react_table
+
+yarn install
+
+yarn dev
+
+yarn add redux react-redux redux-thunk materialize-css@next sass @reduxjs/toolkit @faker-js/faker @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome dayjs
+
+touch types.ts hooks.ts store.ts usersSlice.ts .env ./reducers/index.ts ./reducers/usersReducer.ts ./reducers/index.ts
+
+.env -> localStorage requires a string key to store and retrieve items
+
+Add .env to .gitignore
+
+Wrap your app with the Redux Provider => src/main.tsx
+
+Use useEffect to dispatch the thunk once on component moun
+
+This ensures the users are loaded or generated and stored in Redux when the component first renders.
+
+src/main.tsx => import materializecss
+
+When MaterializeCSS is a great fit
+
+    You want a polished, professional look quickly.
+
+    You’re okay with a bit less control over styling utilities.
+
+    You want some UI components with JS functionality out of the box.
+
+    You want to avoid building too much custom CSS during a time-limited take-home.
+
+Use reducers for slice-local sync actions.
+
+Use extraReducers to respond to async thunk actions or any other actions outside this slice.
